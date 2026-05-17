@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package co.edu.designpatterns.Decorator;
 
 /**
@@ -10,6 +6,13 @@ package co.edu.designpatterns.Decorator;
  */
 public class MainDecorator {
     public static void main(String[] args) {
+        FileComponent file = new BasicFile();
         
+        file = new CompressionDecorator(file);
+        file = new EncryprionDecorator(file);
+        file = new BackupDecorator(file);
+        
+        System.out.println("File: "+ file.getDescription());
+        System.out.println("Final Size:" + file.getSize());
     }
 }
