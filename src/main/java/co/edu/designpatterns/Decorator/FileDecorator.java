@@ -6,9 +6,24 @@ package co.edu.designpatterns.Decorator;
  */
 public abstract class FileDecorator extends FileComponent{
     
-    protected FileComponent file;
+    protected FileComponent wrappedFile;
     
     public FileDecorator(FileComponent file){
-        this.file = file;
+        this.wrappedFile = file;
+    }
+    
+    @Override
+    public String getDescription(){
+        return wrappedFile.getDescription();
+    }
+    
+    @Override
+    public double getSize(){
+        return wrappedFile.getSize();
+    }
+    
+    @Override
+    public double getCost(){
+        return wrappedFile.getCost();
     }
 }

@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package co.edu.designpatterns.Decorator;
 
 /**
@@ -10,17 +6,26 @@ package co.edu.designpatterns.Decorator;
  */
 public class BackupDecorator extends FileDecorator{
     
-    public BackupDecorator(FileComponent file){
+    private final int copies;
+    
+    public BackupDecorator(FileComponent file, int copies){
         super(file);
+        this.copies = Math.max(1, copies);
     }
     
     @Override
     public String getDescription(){
-        return file.getDescription() + " + Backup";
+        return wrappedFile.getDescription() + " [Backup x" + copies + "]";
     }
     
     @Override
-    public int getSize(){
-        return file.getSize() + 50;
+    public double getSize(){
+        return Math.round(wrappedFile.getSize() * (1+copies)*100)/100;
+    }
+    
+    @Override
+    public double getCost(){
+        double ioCost = copies * (wrappedFile.getSize() /200);
+        return wrappedFile.getCost() + ioCost;
     }
 }

@@ -6,5 +6,6 @@ package co.edu.designpatterns.Decorator;
  */
 public abstract class FileComponent {
     public abstract String getDescription();
-    public abstract int getSize();
+    public abstract double getSize(); // Kb
+    public abstract double getCost(); // Costo de procesamiento
 }
