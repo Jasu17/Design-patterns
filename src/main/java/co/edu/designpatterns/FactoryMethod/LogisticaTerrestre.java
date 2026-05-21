@@ -3,13 +3,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package co.edu.designpatterns.FactoryMethod;
-
 /**
  *
- * @author jasu17
+ * @author panda
  */
-public class MainFactoryMethod {
-    public static void main(String[] args) {
-        
+public class LogisticaTerrestre extends Logistica{
+
+    @Override
+    public Transporte crearTransporte() {
+        return new Camion();
     }
+    
 }
