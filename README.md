@@ -14,7 +14,7 @@ Sistema de notificaciones para una tienda en línea donde los clientes se suscri
 Sistema de procesamiento de archivos que permite aplicar compresión, cifrado y respaldo de forma encadenada, calculando acumulativamente el tamaño y costo resultantes.
 
 ## Estructura del proyecto
-´´´
+```
 ├── FactoryMethod/
 │   ├── Logistica.java
 │   ├── LogisticaTerrestre.java
@@ -39,7 +39,7 @@ Sistema de procesamiento de archivos que permite aplicar compresión, cifrado y 
 ├── EncryptionDecorator.java
 ├── BackupDecorator.java
 └── MainDecorator.java
-'''
+```
 
 
 ## Tecnologías
