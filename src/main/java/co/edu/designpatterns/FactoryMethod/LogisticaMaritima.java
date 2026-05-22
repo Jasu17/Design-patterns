@@ -7,6 +7,8 @@ package co.edu.designpatterns.FactoryMethod;
  *
  * @author panda
  */
+
+//subclase que crea transporte marítimo
 public class LogisticaMaritima extends Logistica{
 
     @Override

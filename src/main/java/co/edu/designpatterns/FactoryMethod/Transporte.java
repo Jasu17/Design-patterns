@@ -8,6 +8,8 @@ package co.edu.designpatterns.FactoryMethod;
  *
  * @author panda
  */
+
+// Interfaz común para todos los tipos de transporte
 public interface Transporte {
     void entregar();
 }

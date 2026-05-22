@@ -7,6 +7,8 @@ package co.edu.designpatterns.FactoryMethod;
  *
  * @author panda
  */
+
+// Producto concreto: transporte terrestre
 public class Camion implements Transporte{
 
     @Override

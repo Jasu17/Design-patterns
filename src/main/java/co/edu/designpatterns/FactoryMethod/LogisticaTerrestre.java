@@ -7,6 +7,8 @@ package co.edu.designpatterns.FactoryMethod;
  *
  * @author panda
  */
+
+// Subclase que crea transporte terrestre
 public class LogisticaTerrestre extends Logistica{
 
     @Override
