@@ -44,7 +44,7 @@ Sistema de procesamiento de archivos que permite aplicar compresión, cifrado y 
 
 ## Tecnologías
 
-- Java 17
+- Java 21
 - Sin dependencias externas
 
 ## Autores
